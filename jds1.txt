@@ -1,0 +1,199 @@
+ata Scientist (ML) skills:
+
+Bachelor’s degree in Mathematics, Statistics, or related field; or equivalent combination of education and experience
+3+ years of relevant professional experience
+Experience in an Agile environment and willing to lead
+Must have experience developing and refining requirements from vague customer requests.
+Experience in applying analytics techniques (e.g., optimization, machine learning, experimentation, mathematical modeling) using analytical tools and programming languages (e.g., R, Python, SAS)
+Deep understanding of data structures and algorithms
+Deep understanding of solution and technical design
+Strong problem-solving skills and analytical mindset
+Ability to communicate effectively, both verbally and written, with teammates
+
+Basic
+Bachelor’s degree in Computer Science, or related field
+3+ years of industrial experience
+Experience in Scala, Java, Python, Go, Javascript, C#, or similar languages
+Strong in problem solving, data structures and algorithms
+Write well-structured and tested code
+Excellent in written and verbal technical communications skills
+Preferred Qualifications
+Experience with container technologies (Docker, Kubernetes, Helm)
+Expert in Scala
+Experience in big data and cloud software services (Azure, AWS) and designing systems for scalability, performance and reliability
+Knowledge in Speech Recognition and Natural Language Processing
+Machine Learning / Deep Learning experience: building applied AI-related features, products or systems
+Follow the latest in software engineering and open source technologies
+Graduate degree (Ms or PhD) in Computer Science, or related field
+
+Develop data and predictive models for solving business problems, and in improving GoHealth's software products and business processes
+Evangelize software engineering best practices and proactively identify technical debt and other issues related to improving SLA
+Seek out ways to automate and accelerate development of data-driven products, and then implementing them
+Maintain and look to improve our Machine Learning Deployment Pipeline on AWS Sagemaker
+Collaborate with business stakeholders, business operations, and product engineering teams in analyzing business problems, building and testing solutions and data models, and implementing the algorithms and results of the models
+Work closely with Data Engineers in designing the schemas and data pipelines needed for downstream use by regression models and jobs
+Author formal and informal reports that effectively communicate the models and the results to both technical and non-technical audiences
+Confer with Data Science, Product, and Engineering stakeholders:
+To define and implement new data-powered products, and predictive models
+To deploy and maintain them in production as RESTful services and/or batch jobs
+
+Skills And Experience
+Master's or PhD in Statistics, Mathematics, Computer Science, Economics, or related quantitative field.
+2+ years of experience demonstrating trajectory of professional growth in data science or machine learning
+Skilled in the the following:
+Machine learning, data science modeling - using scikit-learn, tensorflow, pytorch, and relevant technologies
+Python - scikit-learn, pandas, numpy
+Python unit testing framework - pytest, nosetest, or other testing frameworks
+AWS ecosystem, and preferably with docker and/or Linux/Unix experience
+Relational databases and SQL including MySQL, Postgres, SQL Server, Oracle, or equivalent
+Strong analytical and problem solving ability with strong attention to detail and accuracy.
+
+
+
+Design, deploy and maintain a cloud infrastructure system for the scheduling and deployment of Data Science’s analytic and machine learning jobs
+Collaborate with DevOps and Cloud Infrastructure teams to build machine learning deployment pipelines
+Collaborate with Engineering and Product teams to implement machine learning interfaces
+Help Data Science deliver models into production from beginning to end through scalable endpoints for ease of service integration
+Build actionable monitoring and alerting systems
+Develop a thorough understanding of our data and interpret them as they relate to shopper behavior, search performance, profitability, and product development
+Collaborate with other members of the Data Science and Data Engineering teams on ways to approach problems, augment code, and share new techniques
+
+Requirements
+At least 2 years of experience building data and machine learning pipelines to the cloud and/or real-time customer facing solutions
+Experience with Docker, Git, AWS (or similar cloud technology), and the automated provisioning of infrastructure
+Familiarity with R or Python and SQL
+Fluent in machine learning tools (scikit-learn, Tensorflow, PyTorch, etc.)
+Ability to design docker-based machine learning services/wrappers to serve model results through APIs
+Nice to Haves
+Experience implementing services in Kubernetes
+Experience with data platform tools like Airflow
+Experience in e-commerce
+Familiarity with deploying machine learning in search engines such ElasticSearch or Solr
+Experience deploying machine learning solutions in Golang(Go)
+
+PhD (preferred) or Master’s degree in Machine Learning or Artificial Intelligence, Computer Science, Statistics, Mathematics, Science, Electrical Engineering or related field
+At least 2+ years experience in the industry
+Strong background of machine learning, deep learning, statistics and quantitative analytics
+Advanced experience with Python (preferred), or R, C/C++, Java
+Deep understanding of MySQL, Postgres, Redshift, relational databases etc.
+
+Good To Have
+Experience working on social issues and/or government projects a big plus
+Domain knowledge in earthquakes or flooding, a plus
+Experience with AWS and big data technologies such as hive, hadoop, spark etc.
+Worked on geospatial datasets
+
+What You Will Do
+Build and improve existing machine learning models
+Work with and support domain experts and data scientists in different hazard products
+Demonstrate up-to-date machine learning skills and apply this to the development, execution, and improvement of action plans
+Assess the potential usefulness and validity of new statistical approaches and data sources.
+Identify key problems in prediction models and propose innovative solutions
+Formulate your own problems as the problem might not always be defined for you
+Work with cross-functional partners across the business
+
+
+
+
+Designing and analyzing experiments to measure the impact of new product features
+Investigating high-level questions like “What are the collaborative patterns of the most successful teams using Asana?”
+Adding new metrics and aggregations to our data warehouse to make new classes of questions answerable
+Building models to predict the growth trajectory of different customer segments
+
+
+About You
+Bachelor Degree in Computer Science, Math, Statistics, Engineering, a related quantitative field, or equivalent experience.
+3+ years of experience in applying data science techniques to drive technical product development and decision-making
+Strong technical background in computer science, statistics, math, information science, or another quantitative field
+Fluency in at least one modern language useful for data processing (e.g. Python, Scala)
+Proficiency with relational data modeling and SQL
+Expertise in statistical methods and experimental design and analysis
+Experience with distributed data processing systems (e.g. Spark, Redshift)
+Background in advanced statistical modeling (e.g. GLM, mixed effects) and/or machine learning
+
+Work with the engineering, design, animation, and product teams to develop new features for our mobile app
+Be responsible for the complete lifecycle of product features from planning to implementation to testing to live ops
+Drive backend design, APIs and distributed systems etc.
+Day-to-day coding, performance profiling, optimization and general troubleshooting for new features and existing features
+Work with the engineering team to help plan the company's long-term engineering roadmap and identify areas of improvement
+Communicate timelines, own tasks
+Strong sense of ownership in start-to-finish delivery of app features
+What You Need for this Position
+Python
+Tensorflow
+AWS
+API
+
+
+
+Roles And Responsibilities
+Develop custom data models and algorithms to apply to data sets.
+Use predictive modeling to increase and optimize customer experiences, revenue generation, loyalty targeting and other business outcomes.
+Coordinate with different functional teams to implement models and monitor outcomes.
+Develop processes and tools to monitor and analyze model performance and data accuracy.
+Qualifying factors
+Strong problem solving skills with an emphasis on product development.
+Experience using statistical computer languages (R, Python, SLQ, etc.) to manipulate data and draw insights from large data sets.
+Knowledge of a variety of machine learning techniques (XGBoost, clustering, decision tree learning, artificial neural networks, etc.) and their real-world advantages/drawbacks.
+Knowledge of advanced statistical techniques and concepts (regression, properties of distributions, statistical tests and proper usage, etc.) and experience with applications.
+Excellent written and verbal communication skills for coordinating across teams.
+A drive to learn and master new technologies and techniques.
+Familiarity with the following software/tools:
+Knowledge and experience in statistical and data mining techniques: XGBoost, text mining, GLM/Regression, Random Forest, Boosting, Trees,
+Experience querying databases and using statistical computer languages: R, Python, SLQ, etc.
+Experience using AWS AI/ML, XG boost, AWS comprehend and Tesseract
+Experience using web services, AWS API gateways, etc.
+
+Qualifications
+
+Education and Years of Experience:
+We are looking for someone with prior experience manipulating data sets and building models for document classification and OCR.
+Certification in any of the above areas (e.g. AWS) would be a plus.
+The candidate must be able to articulate and present insight into the working of relevant algorithms and models.
+
+Required Skills/Certifications
+Excellent presentation and communication skills
+Communicating insights to technical as well as non-technical audiences
+
+SNAP
+Develop machine learning and deep learning solutions across the entire 
+machine learning workflow from data collection to model training, and solve visual recognition tasks such as classification, detection, and segmentation
+Optimize deep neural networks to run efficiently on mobile devices
+Apply findings from cutting edge research to help solve challenging product problems
+Work with product teams and engineers to make applications of computer vision ubiquitous to Snapchat
+
+Knowledge, Skills & Abilities
+Ability to read and implement related academic literature in deep learning and computer vision
+Solid understanding of the production machine learning workflow
+
+Minimum Qualifications
+Bachelor’s degree in a technical field such as computer science or equivalent experience
+2+ years of industry engineering or research and development experience
+Industry experience with one or more of the following: deep learning, large-scale visual search, image classification, object detection, semantic segmentation
+Experience with TensorFlow, PyTorch, or related deep learning framework
+
+Preferred Qualifications
+Masters/PhD in a technical field such as computer science or equivalent industry experience
+5+ years of industry engineering or research and development experience
+Publications in top-tier conferences such as CVPR, ICCV, ECCV, NIPS, ICML
+Experience building large-scale machine learning systems or computer vision applications
+A passion for Snapchat and creativity!
+
+
+Coursera
+Your Responsibilities
+Generate a deep understanding of trends in online learning, teaching, and skill development by applying methods from statistics, econometrics, and machine learning on the rich data captured on the Coursera platform
+Build reports, models, and tools to help communicate and scale those insights to internal and external stakeholders
+Partner with governments, think tanks, and NGOs like the World Economic Forum to publish data-driven thought-leadership on skills, education, and the future of work
+Ideate and launch novel data-powered reports like our Global Skills Index, including by building a top our Skills Graph foundations and collaborating closely with our go-to-market teams
+Oversee and contribute to the data science team’s research collaborations with academics; drive RFP processes and the publication of learnings on topics ranging from algorithmic fairness to the economic impact of learning on job outcomes
+
+Your Skills
+Graduate degree in applied math, economics, statistics, computer science, or related technical field
+Strong data visualization, applied statistics, and predictive modeling skills
+Proficient in Python, R, or other programming languages for data manipulation, analysis, machine learning, or application development
+Proficient with relational databases and SQL
+Excellent oral and written communication skills, including ability to communicate findings clearly to both technical and non-technical audiences
+Strong project management and cross-functional collaboration skills
+2+ years of research and/or industry experience preferred
+Experience with applied social science research preferred

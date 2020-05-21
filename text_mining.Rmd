@@ -1,0 +1,45 @@
+---
+title: "R Notebook"
+output: html_notebook
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load packages}
+library("tm") # text mining
+library(stringr)
+library(wordcloud)
+```
+
+
+```{r read JD}
+o.jd <- readLines("vecna.txt") # each line is a vector
+str(o.jd)
+```
+
+```{r text transformations}
+t.jd <- paste(o.jd, collapse = " ") # convert to a single vector
+t.jd <- gsub(pattern = "\\W", replace = " ", t.jd) # replace punctuation with spaces
+t.jd <- tolower(t.jd) # to lower case
+t.jd <- removeWords(t.jd, stopwords("english")) # remove stopwords
+# t.jd <- gsub(pattern = "\\b[A-z]\\b{1}", replace = " ") # replace words of length 1
+t.jd <- tm::stripWhitespace(t.jd) # cleanup white spaces from previous transformations
+
+# t.jd
+```
+
+```{r word cloud}
+s.jd <- str_split(t.jd, pattern = "\\s+") # split string
+s.jd <- unlist(s.jd) # list to a character vector\
+
+pal2 <- brewer.pal(5,"Dark2")
+wordcloud(s.jd, min.freq = 3, random.order = FALSE, scale = c(4,0.7), color = pal2, rot.per=.1)
+```
+
+```{r frequency table}
+ta.jd <- sort(table(s.jd), decreasing = TRUE)
+ta.jd <- as.data.frame(ta.jd)
+ta.jd[ta.jd$Freq > 10, ] # top words
+
+```
+

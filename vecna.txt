@@ -1,0 +1,31 @@
+Technical Support Engineer - Tier 3
+
+About the role:
+
+Vecna Robotics seeks a Technical Support Engineer to join its Network Operations Center. These cross-functional engineers manage all technical issues with our robots from the field that cannot be resolved by Tier 1 & 2 technical support staff, and are responsible for root cause analysis, quality assurance planning, monitoring of regression and performance trends, mentoring and training of Tier 2 staff, and complex site configurations and path tweaks during active robot deployments. This role works closely with project managers and deployment engineers, and serves as a bridge to product development, manufacturing and sales and marketing divisions. 
+
+In this role you will:
+Manage all escalated technical support issues that are escalated from the NOC Technical Support Tier 1 & 2 team members, and coordinate customer communication on such issues. 
+Provide root cause analysis and advanced troubleshooting for complex hardware & software issues. 
+Provide product related training primarily to Tier 2 Robotics Technical Support Specialists as well as acting as a mentor to all NOC team members. 
+Respond to customer issues within established timeframes to ensure our customer support service levels are achieved. 
+Escalate technical support issues that cannot be resolved by Tier 1, 2 or 3 to product development teams. 
+Monitor performance and quality, and manage updates to field robots and coordinate replacement parts with internal manufacturing division.
+Act as a backup for Tier 2 Robotics Technical Support Specialists. 
+Provide analytical reports to senior staff. 
+Remotely coordinate and resolve individual site issues within the U.S through support to 3rd party vendors as necessary. 
+Occasional travel required to client sites on short notice may be required. 
+
+What we are looking for:
+BS. degree in an engineering field strongly preferred; equivalent experience considered.
+Minimum of 1 year experience in providing technical support on complex software and hardware solutions.
+Demonstrated analytical and problem-solving skills to methodically determine root cause, and proposing solutions or workarounds to difficult and complex production issues reported by customers and partners.  
+Excellent written communication and verbal skills, as well as strong listening skills. 
+Customer service mindset to serve as an example to junior team members.
+Ability to manage multiple priorities with a sense of urgency.
+Experience utilizing debugging tools and lab simulations to analyze problems and identify solutions. 
+Proven success completing assigned tickets in a timely manner and ensuring tickets are documented clearly with current status. 
+
+Advanced knowledge or experience in one or more of the following areas preferred: multiple Microsoft Windows operating systems; quality assurance; MS SQL databases; LAN/WAN Networking; or IT Network Operations.
+Prior experience supporting mobile robot solutions a plus.
+Up to 20% travel may be required. 
