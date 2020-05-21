@@ -13,7 +13,7 @@ library(wordcloud)
 
 
 ```{r read JD}
-o.jd <- readLines("vecna.txt") # each line is a vector
+o.jd <- readLines("jds.txt") # each line is a vector
 str(o.jd)
 ```
 
