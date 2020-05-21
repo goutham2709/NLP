@@ -1,7 +1,9 @@
 ---
 title: "R Notebook"
-output: html_notebook
-editor_options: 
+output:
+  pdf_document: default
+  html_notebook: default
+editor_options:
   chunk_output_type: console
 ---
 
@@ -9,6 +11,8 @@ editor_options:
 library("tm") # text mining
 library(stringr)
 library(wordcloud)
+
+options(warn=-1)
 ```
 
 
@@ -39,6 +43,7 @@ wordcloud(s.jd, min.freq = 3, random.order = FALSE, scale = c(4,0.7), color = pa
 ```{r frequency table}
 ta.jd <- sort(table(s.jd), decreasing = TRUE)
 ta.jd <- as.data.frame(ta.jd)
+names(ta.jd)[1] <- "Word"
 ta.jd[ta.jd$Freq > 10, ] # top words
 
 ```
