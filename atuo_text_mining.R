@@ -46,3 +46,7 @@ ta.jd[ta.jd$Freq > 10, ] %>% View()
 
 
 #####
+###### SPACE #########
+## build data dictionary
+
+
