@@ -1,0 +1,65 @@
+[33mcommit ace1bd030bf4752f79cdd6588cef6164faa4a62e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Wed May 27 21:17:37 2020 -0400
+
+    tryouts
+
+[33mcommit 8918600723ee5e34866952c4a1adabafd82cf331[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Wed May 27 21:07:55 2020 -0400
+
+    Large file
+
+[33mcommit f0ca5172784a1328da0cfe8dbdc45ce47f3eca03[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Wed May 27 20:57:53 2020 -0400
+
+    Deleted large file
+
+[33mcommit 8eef000129f1d1b10978ffa2103f225b1c50cab4[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Wed May 27 20:34:16 2020 -0400
+
+    Nlp
+
+[33mcommit de069bbba6dee99346d1ab35d252cd948c21efcb[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Wed May 27 16:39:57 2020 -0400
+
+    Similarity matching
+
+[33mcommit acb5d9d9e83fa2c06e36a1f92de5fb36cab63490[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Thu May 21 23:33:09 2020 -0400
+
+    EOD commit
+
+[33mcommit f3f744a27f79220b3d9d09e95f00ca370922eba7[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Thu May 21 12:41:44 2020 -0400
+
+    made "knit" work
+
+[33mcommit 1e6fbad5138d2569541d549d530698d07edd16fb[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Thu May 21 12:06:44 2020 -0400
+
+    Plots clean up
+
+[33mcommit 559ed9d160acc34ae6a20ae4bd9777e9aa0c1c4e[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Thu May 21 11:42:25 2020 -0400
+
+    Automated text mining
+
+[33mcommit 16302ae9cecc8d5a3e80cc18f5e54ab8b13cca2f[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Thu May 21 09:43:37 2020 -0400
+
+    Begin day, NLP commit
+
+[33mcommit 0d414b4bc61d4e3dd4faca8253394560aceee159[m
+Author: GOUTHAM <eversmilinggoutham@gmail.com>
+Date:   Wed May 20 23:59:18 2020 -0400
+
+    NLP text mining

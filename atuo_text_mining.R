@@ -1,4 +1,6 @@
 ##### Automating text_mining.rmd script
+### author: "Goutham"
+### output: "auto_text_mining.R"
 
 ## require packages
 options(warn=-1)
@@ -41,5 +43,10 @@ ta.jd <- sort(table(s.jd), decreasing = TRUE)
 ta.jd <- as.data.frame(ta.jd)
 names(ta.jd)[1] <- "Word"
 ta.jd[ta.jd$Freq > 10, ] %>% View()
+
+
+#####
+###### SPACE #########
+## build data dictionary
 
 

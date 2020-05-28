@@ -1,0 +1,66 @@
+---
+title: "R Notebook"
+output:
+  pdf_document: default
+  html_notebook: default
+editor_options:
+  chunk_output_type: console
+---
+
+```{r load packages}
+# http://fredgibbs.net/tutorials/document-similarity-with-r.html#picking-your-corpus
+
+rm(list = ls())
+Sys.setenv(NOAWT=TRUE)
+
+require("tm")
+```
+
+```{r load data}
+my.corpus <- Corpus(DirSource("r-corpus"))
+getTransformations
+```
+
+```{r}
+my.corpus <- tm_map(my.corpus, removePunctuation)
+my.corpus <- tm_map(my.corpus, removeWords, stopwords("english"))
+# my.corpus <- tm_map(my.corpus, stemDocument)
+```
+
+```{r}
+my.tdm <- TermDocumentMatrix(my.corpus)
+inspect(my.tdm)
+word.freq <- as.matrix(my.tdm[,])
+View(word.freq)
+
+my.dtm <- DocumentTermMatrix(my.corpus, control = list(weighting = weightTfIdf, stopwords = TRUE))
+inspect(my.dtm)
+```
+
+```{r}
+word.freq <- cbind(word.freq, as.matrix(rowSums(word.freq)))
+colnames(word.freq)[10] <- "total.freq"
+View(word.freq)
+
+word.freq <- word.freq[order(-word.freq[,10]),] # Order the matrix
+```
+
+
+```{r}
+findFreqTerms(my.tdm, 10)
+# findAssocs(my.tdm, 'mine', 0.20)
+
+my.df <- as.data.frame(inspect(my.tdm))
+my.df.scale <- scale(my.df)
+d <- dist(my.df.scale,method="euclidean")
+fit <- hclust(d, method="ward")
+plot(fit)
+```
+
+```{r exp}
+library(slam)
+
+cosine_dist_mat <- round(crossprod_simple_triplet_matrix(my.tdm)/(sqrt(col_sums(my.tdm^2) %*% t(col_sums(my.tdm^2))))*100, 2)
+cosine_dist_mat
+```
+
