@@ -1,0 +1,29 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+#### Stop words dictionary
+
+```{r list of words}
+options(warn=-1)
+
+dont.words <- get(load(file = "dont_words.RData"))
+ask.input <- readline(prompt="Enter words you want to remove (separate by comma): ")
+split.input <- strsplit(ask.input, split = ",")
+split.input.ws <- unlist(lapply(split.input, trimws)) # trim white spaces
+split.input.ws <- tolower(split.input.ws)
+```
+
+```{r loop}
+for (w in split.input.ws){
+  if (!(w %in% dont.words)) {
+    dont.words <- append(dont.words, split.input.ws)
+    print(paste(w, "added"))
+  } else {print(paste(w, "already present"))}
+}
+
+# dont.words <- tm::stopwords()
+save(dont.words, file = "dont_words.RData")
+```
+
