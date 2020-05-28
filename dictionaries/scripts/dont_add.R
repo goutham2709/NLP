@@ -1,0 +1,25 @@
+#### dont_add
+
+options(warn=-1)
+
+dont.words <- get(load(file = "dont_words.RData"))
+print(paste("Number of words currently: ", length(dont.words)))
+View(dont.words)
+ask.input <- readline(prompt="Enter words you want to add (separate by comma): ")
+
+split.input <- strsplit(ask.input, split = ",")
+split.input.ws <- unlist(lapply(split.input, trimws)) # trim white spaces
+split.input.ws <- tolower(split.input.ws)
+
+for (w in split.input.ws){
+  if (!(w %in% dont.words)) {
+    dont.words <- append(dont.words, split.input.ws)
+    print(paste(w, "added"))
+  } else {print(paste(w, "already present"))}
+}
+print(paste("Number of words after adding: ", length(dont.words)))
+
+# dont.words <- tm::stopwords()
+save(dont.words, file = "dont_words.RData")
+
+rm(list = ls())
