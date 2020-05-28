@@ -1749,16 +1749,12 @@ summary {
 
 
 <!-- rnb-text-begin -->
-<div id="stop-words-dictionary" class="section level4">
-<h4>Stop words dictionary</h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub3B0aW9ucyh3YXJuPS0xKVxuXG5kb250LndvcmRzIDwtIGdldChsb2FkKGZpbGUgPSBcImRvbnRfd29yZHMuUkRhdGFcIikpXG5wcmludChwYXN0ZShcIk51bWJlciBvZiB3b3JkcyBjdXJyZW50bHk6IFwiLCBsZW5ndGgoZG9udC53b3JkcykpKVxuYXNrLmlucHV0IDwtIHJlYWRsaW5lKHByb21wdD1cIkVudGVyIHdvcmRzIHlvdSB3YW50IHRvIGFkZCAoc2VwYXJhdGUgYnkgY29tbWEpOiBcIilcbnNwbGl0LmlucHV0IDwtIHN0cnNwbGl0KGFzay5pbnB1dCwgc3BsaXQgPSBcIixcIilcbnNwbGl0LmlucHV0LndzIDwtIHVubGlzdChsYXBwbHkoc3BsaXQuaW5wdXQsIHRyaW13cykpICMgdHJpbSB3aGl0ZSBzcGFjZXNcbnNwbGl0LmlucHV0LndzIDwtIHRvbG93ZXIoc3BsaXQuaW5wdXQud3MpXG5gYGAifQ== -->
-<pre class="r"><code>options(warn=-1)
-
-dont.words &lt;- get(load(file = &quot;dont_words.RData&quot;))
-print(paste(&quot;Number of words currently: &quot;, length(dont.words)))
-ask.input &lt;- readline(prompt=&quot;Enter words you want to add (separate by comma): &quot;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2FudC53b3JkcyA8LSBnZXQobG9hZChmaWxlID0gXCJ3YW50X3dvcmRzLlJEYXRhXCIpKVxucHJpbnQocGFzdGUoXCJOdW1iZXIgb2Ygd29yZHMgY3VycmVudGx5OiBcIiwgbGVuZ3RoKHdhbnQud29yZHMpKSlcbmFzay5pbnB1dCA8LSByZWFkbGluZShwcm9tcHQ9XCJFbnRlciB3b3JkcyB5b3Ugd2FudCB0byByZW1vdmUgKHNlcGFyYXRlIGJ5IGNvbW1hKTogXCIpXG5zcGxpdC5pbnB1dCA8LSBzdHJzcGxpdChhc2suaW5wdXQsIHNwbGl0ID0gXCIsXCIpXG5zcGxpdC5pbnB1dC53cyA8LSB1bmxpc3QobGFwcGx5KHNwbGl0LmlucHV0LCB0cmltd3MpKSAjIHRyaW0gd2hpdGUgc3BhY2VzXG5zcGxpdC5pbnB1dC53cyA8LSB0b2xvd2VyKHNwbGl0LmlucHV0LndzKVxuYGBgIn0= -->
+<pre class="r"><code>want.words &lt;- get(load(file = &quot;want_words.RData&quot;))
+print(paste(&quot;Number of words currently: &quot;, length(want.words)))
+ask.input &lt;- readline(prompt=&quot;Enter words you want to remove (separate by comma): &quot;)
 split.input &lt;- strsplit(ask.input, split = &quot;,&quot;)
 split.input.ws &lt;- unlist(lapply(split.input, trimws)) # trim white spaces
 split.input.ws &lt;- tolower(split.input.ws)</code></pre>
@@ -1767,12 +1763,21 @@ split.input.ws &lt;- tolower(split.input.ws)</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-</div>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yICh3IGluIHNwbGl0LmlucHV0LndzKXtcbiAgaWYgKHcgJWluJSB3YW50LndvcmRzKSB7XG4gICAgd2FudC53b3JkcyA8LSB0bTo6cmVtb3ZlV29yZHMod2FudC53b3Jkcywgc3BsaXQuaW5wdXQud3MpXG4gICAgd2FudC53b3JkcyA8LSB3YW50LndvcmRzW3dhbnQud29yZHMgIT0gXCJcIl1cbiAgICBwcmludChwYXN0ZSh3LCBcInJlbW92ZWRcIikpXG4gIH0gZWxzZSB7cHJpbnQocGFzdGUodywgXCJub3QgcHJlc2VudFwiKSl9XG59XG5wcmludChwYXN0ZShcIk51bWJlciBvZiB3b3JkcyBhZnRlciByZW1vdmluZzogXCIsIGxlbmd0aCh3YW50LndvcmRzKSkpXG5cbnNhdmUod2FudC53b3JkcywgZmlsZSA9IFwid2FudF93b3Jkcy5SRGF0YVwiKVxuYGBgIn0= -->
+<pre class="r"><code>for (w in split.input.ws){
+  if (w %in% want.words) {
+    want.words &lt;- tm::removeWords(want.words, split.input.ws)
+    want.words &lt;- want.words[want.words != &quot;&quot;]
+    print(paste(w, &quot;removed&quot;))
+  } else {print(paste(w, &quot;not present&quot;))}
+}
+print(paste(&quot;Number of words after removing: &quot;, length(want.words)))
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQojIyMjIFN0b3Agd29yZHMgZGljdGlvbmFyeQ0KDQpgYGB7ciBsaXN0IG9mIHdvcmRzfQ0Kb3B0aW9ucyh3YXJuPS0xKQ0KDQpkb250LndvcmRzIDwtIGdldChsb2FkKGZpbGUgPSAiZG9udF93b3Jkcy5SRGF0YSIpKQ0KcHJpbnQocGFzdGUoIk51bWJlciBvZiB3b3JkcyBjdXJyZW50bHk6ICIsIGxlbmd0aChkb250LndvcmRzKSkpDQphc2suaW5wdXQgPC0gcmVhZGxpbmUocHJvbXB0PSJFbnRlciB3b3JkcyB5b3Ugd2FudCB0byBhZGQgKHNlcGFyYXRlIGJ5IGNvbW1hKTogIikNCnNwbGl0LmlucHV0IDwtIHN0cnNwbGl0KGFzay5pbnB1dCwgc3BsaXQgPSAiLCIpDQpzcGxpdC5pbnB1dC53cyA8LSB1bmxpc3QobGFwcGx5KHNwbGl0LmlucHV0LCB0cmltd3MpKSAjIHRyaW0gd2hpdGUgc3BhY2VzDQpzcGxpdC5pbnB1dC53cyA8LSB0b2xvd2VyKHNwbGl0LmlucHV0LndzKQ0KYGBgDQoNCmBgYHtyIGxvb3AgYWRkfQ0KZm9yICh3IGluIHNwbGl0LmlucHV0LndzKXsNCiAgaWYgKCEodyAlaW4lIGRvbnQud29yZHMpKSB7DQogICAgZG9udC53b3JkcyA8LSBhcHBlbmQoZG9udC53b3Jkcywgc3BsaXQuaW5wdXQud3MpDQogICAgcHJpbnQocGFzdGUodywgImFkZGVkIikpDQogIH0gZWxzZSB7cHJpbnQocGFzdGUodywgImFscmVhZHkgcHJlc2VudCIpKX0NCn0NCnByaW50KHBhc3RlKCJOdW1iZXIgb2Ygd29yZHMgYWZ0ZXIgYWRkaW5nOiAiLCBsZW5ndGgoZG9udC53b3JkcykpKQ0KDQpkb250LndvcmRzIDwtIHRtOjpzdG9wd29yZHMoKQ0Kc2F2ZShkb250LndvcmRzLCBmaWxlID0gImRvbnRfd29yZHMuUkRhdGEiKQ0KYGBgDQoNCg0KDQo=</div>
+save(want.words, file = &quot;want_words.RData&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7ciBsaXN0IG9mIHdvcmRzIHJlbW92ZX0NCndhbnQud29yZHMgPC0gZ2V0KGxvYWQoZmlsZSA9ICJ3YW50X3dvcmRzLlJEYXRhIikpDQpwcmludChwYXN0ZSgiTnVtYmVyIG9mIHdvcmRzIGN1cnJlbnRseTogIiwgbGVuZ3RoKHdhbnQud29yZHMpKSkNCmFzay5pbnB1dCA8LSByZWFkbGluZShwcm9tcHQ9IkVudGVyIHdvcmRzIHlvdSB3YW50IHRvIHJlbW92ZSAoc2VwYXJhdGUgYnkgY29tbWEpOiAiKQ0Kc3BsaXQuaW5wdXQgPC0gc3Ryc3BsaXQoYXNrLmlucHV0LCBzcGxpdCA9ICIsIikNCnNwbGl0LmlucHV0LndzIDwtIHVubGlzdChsYXBwbHkoc3BsaXQuaW5wdXQsIHRyaW13cykpICMgdHJpbSB3aGl0ZSBzcGFjZXMNCnNwbGl0LmlucHV0LndzIDwtIHRvbG93ZXIoc3BsaXQuaW5wdXQud3MpDQpgYGANCg0KYGBge3IgbG9vcCByZW1vdmV9DQpmb3IgKHcgaW4gc3BsaXQuaW5wdXQud3Mpew0KICBpZiAodyAlaW4lIHdhbnQud29yZHMpIHsNCiAgICB3YW50LndvcmRzIDwtIHRtOjpyZW1vdmVXb3Jkcyh3YW50LndvcmRzLCBzcGxpdC5pbnB1dC53cykNCiAgICB3YW50LndvcmRzIDwtIHdhbnQud29yZHNbd2FudC53b3JkcyAhPSAiIl0NCiAgICBwcmludChwYXN0ZSh3LCAicmVtb3ZlZCIpKQ0KICB9IGVsc2Uge3ByaW50KHBhc3RlKHcsICJub3QgcHJlc2VudCIpKX0NCn0NCnByaW50KHBhc3RlKCJOdW1iZXIgb2Ygd29yZHMgYWZ0ZXIgcmVtb3Zpbmc6ICIsIGxlbmd0aCh3YW50LndvcmRzKSkpDQoNCnNhdmUod2FudC53b3JkcywgZmlsZSA9ICJ3YW50X3dvcmRzLlJEYXRhIikNCmBgYA==</div>
 
 
 
@@ -1819,7 +1824,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("dont_dictionary_add.Rmd");
+  window.initializeSourceEmbed("want_dictionary_rm.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>
