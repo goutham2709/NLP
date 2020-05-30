@@ -53,6 +53,15 @@ pal=pal[-(1:3)]
 wordcloud(freq.df$word,freq.df$freq,max.words=100,random.order = F, colors=pal)
 ```
 
+```{r}
+require(ggplot2)
+
+ggplot(head(freq.df,15), aes(reorder(word,freq), freq)) +
+  geom_bar(stat = "identity") + coord_flip() +
+  xlab("Bigrams") + ylab("Frequency") +
+  ggtitle("Most frequent bigrams")
+
+```
 
 
 
