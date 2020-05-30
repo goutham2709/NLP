@@ -1,0 +1,42 @@
+---
+title: "cooccurance_words"
+author: "Goutham"
+date: "5/30/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+### Finding simimlar words that occur together in a document
+# tdm and dtm from similarity_tutorial.Rmd file
+
+```{r libraries and data}
+rm(list = ls())
+
+require("tm")
+require("magrittr")
+my.corpus <- Corpus(DirSource("r-corpus"))
+```
+
+```{r transformations}
+skipWords <- function(x) removeWords(x, stopwords("english"))
+my.corpus <- tm_map(my.corpus, FUN = tm_reduce, tmFuns = list(tolower, skipWords, removePunctuation,
+                                                              stripWhitespace, removeNumbers,
+                                                              stemDocument))
+
+inspect(my.corpus[1])
+```
+
+```{r tdm and dtm}
+# t(tdm) = dtm and vice versa
+
+my.tdm <- TermDocumentMatrix(my.corpus)
+my.dtm <- DocumentTermMatrix(my.corpus)
+
+inspect(my.tdm)
+inspect(my.dtm)
+
+as.matrix(my.tdm[,]) %>% View()
+as.matrix(my.dtm[,]) %>% View()
+
+```
