@@ -12,7 +12,7 @@ editor_options:
 
 ```{r libraries and data}
 # https://www.worldfullofdata.com/text-mining-analysis-including-full-code-r/
-rm(list = ls())
+# rm(list = ls())
 
 require("tm")
 require("magrittr")
@@ -54,7 +54,7 @@ inspect(removeSparseTerms(my.dtm, 0.50)) # keep all terms which appear in 50% of
 findFreqTerms(my.dtm, 15)
 findMostFreqTerms(my.dtm, n = 5)
 
-findAssocs(my.dtm, c("psychiatry"), 0.5)[[1]][1:5] # find co-occurrences of a word using correlation
+findAssocs(my.dtm, c("medical"), 0.5)[[1]][1:5] # find co-occurrences of a word using correlation
 ```
 
 ```{r freq table}
@@ -77,6 +77,28 @@ freq.plot
 ```
 
 ```{r co-occurance heatmap}
+dtm.words <- as.matrix(my.dtm[, Terms(my.dtm) %in% freq.tab$term])
+map.data <- t(dtm.words) %*% dtm.words
 
+diag(map.data) <- 0 # removing lower traingle
+map.data[upper.tri(map.data)] <- NA
+
+require(gplots)
+require(RColorBrewer)
+
+heatmap.2(map.data, 
+          dendrogram = "none", Colv = FALSE, Rowv = FALSE,
+          scale = "none", col = brewer.pal(5, "Blues"),
+          key = TRUE, density.info = "none", key.title = NA, key.xlab = "Frequency",
+          trace = "none",
+          main = "Term co-occurrence",
+          xlab = "Term",
+          ylab = "Term")
+```
+
+```{r correlation heatmap}
+cor.data <- cor(dtm.words)
+corrplot::corrplot(cor.data, method = "square", type = "lower", tl.col = "black", order = "hclust", 
+                   col = brewer.pal(n = 5, name = "RdYlBu"))
 ```
 

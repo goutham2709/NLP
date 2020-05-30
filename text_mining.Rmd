@@ -34,7 +34,7 @@ t.jd <- tm::stripWhitespace(t.jd) # cleanup white spaces from previous transform
 
 ```{r word cloud}
 s.jd <- str_split(t.jd, pattern = "\\s+") # split string
-s.jd <- unlist(s.jd) # list to a character vector\
+s.jd <- unlist(s.jd) # list to a character vector
 
 pal2 <- brewer.pal(5,"Dark2")
 wordcloud(s.jd, min.freq = 3, random.order = FALSE, scale = c(4,0.7), color = pal2, rot.per=.1)
